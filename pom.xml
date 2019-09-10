@@ -25,6 +25,7 @@
         <module>pojo</module>
         <module>config-server</module>
         <module>config-client</module>
+        <module>service-gateway</module>
     </modules>
 
     <properties>
