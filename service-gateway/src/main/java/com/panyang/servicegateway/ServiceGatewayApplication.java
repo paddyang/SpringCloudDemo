@@ -19,7 +19,7 @@ public class ServiceGatewayApplication {
         SpringApplication.run(ServiceGatewayApplication.class, args);
     }
 
-    @Bean
+    /*@Bean
     public RouteLocator myRoutes(RouteLocatorBuilder builder) {
         String httpUrl="http://httpbin.org:80";
         String httpUrl2="http://localhost:8765";
@@ -28,10 +28,10 @@ public class ServiceGatewayApplication {
                         .path("/get")
                         .filters(f -> f.addRequestHeader("hello", "gateway"))
                         .uri(httpUrl))
-                .route(p -> p
+                *//*.route(p -> p
                         .path("/hi")
                         .filters(f -> f.addRequestParameter("name","panyang"))
-                        .uri(httpUrl2))
+                        .uri(httpUrl2))*//*
                 .route(p -> p
                         .host("*.hystrix.com")
                         .filters(f -> f
@@ -46,6 +46,6 @@ public class ServiceGatewayApplication {
     public Mono<String> fallback() {
         return Mono.just("fallback");
     }
-
+*/
 
 }

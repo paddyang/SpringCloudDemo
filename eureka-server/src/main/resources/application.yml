@@ -10,7 +10,18 @@ eureka:
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 
+  server:
+    # 关闭自我保护机制
+    # 该配置可以移除这种自我保护机制，防止失效的服务也被一直访问 (默认该配置是 true)
+    enable-self-preservation: false
+#    # 每隔10s扫描服务列表，移除失效服务
+#    # 该配置可以修改检查失效服务的时间，每隔10s检查失效服务，并移除列表 (默认该配置是 60s)
+#    eviction-interval-timer-in-ms: 10000
+
+
 spring:
   application:
     name: eureka-server
+
+
 
