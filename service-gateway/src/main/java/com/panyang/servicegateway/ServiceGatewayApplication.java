@@ -1,5 +1,6 @@
 package com.panyang.servicegateway;
 
+import com.panyang.servicegateway.filter.TokenFilter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -48,4 +49,8 @@ public class ServiceGatewayApplication {
     }
 */
 
+    @Bean
+    public TokenFilter tokenFilter(){
+        return new TokenFilter();
+    }
 }
