@@ -28,6 +28,7 @@
         <module>service-gateway</module>
         <module>springboot-admin</module>
         <module>springboot-admin-client</module>
+        <module>security</module>
     </modules>
 
     <properties>
